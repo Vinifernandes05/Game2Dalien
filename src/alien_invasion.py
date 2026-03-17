@@ -17,17 +17,35 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
         
-        # Criando uma instância da classe Ship para representar a nave espacial
         self.ship = Ship(self.screen, self.settings)
         
-        # Mudando a cor do plano de fundo em RGB
         self.bg_color = (self.settings.bg_color)
         
-        self.bullets = pygame.sprite.Group() # Cria um grupo para armazenar os projéteis disparados pela nave
+        self.bullets = pygame.sprite.Group()
     
-        self.aliens = pygame.sprite.Group() # Cria um grupo para armazenar os alienígenas presentes no jogo
+        self.aliens = pygame.sprite.Group()
+
+        # Instancia Repeticao passando tudo que ela precisa
+        self.repeticao = Repeticao(
+            self.screen,
+            self.settings,
+            self.ship,
+            self.bullets,
+            self.aliens,
+            self.bg_color
+        )
+
+    def run_game(self):
+        self.repeticao.run_game()  # delega para Repeticao
     
-    
+class CriarFrota:
+
+    def __init__(self, screen, settings, ship, aliens):
+        self.screen = screen
+        self.settings = settings
+        self.ship = ship
+        self.aliens = aliens
+
     def create_fleet(self):
         """Cria uma frota de alienígenas."""
         # Cria um alienígena e calcula o número de alienígenas em uma linha
@@ -52,6 +70,18 @@ class AlienInvasion:
                 alien.rect.y = alien.y
                 self.aliens.add(alien)
     
+class Repeticao:
+    #__init__ recebe tudo que run_game precisa para funcionar
+    def __init__(self, screen, settings, ship, bullets, aliens, bg_color):
+        self.screen = screen
+        self.settings = settings
+        self.ship = ship
+        self.bullets = bullets
+        self.aliens = aliens
+        self.bg_color = bg_color
+        
+        #Já instancia CriarFrota pois run_game depende dela
+        self.criar_frota = CriarFrota(screen, settings, ship, aliens)
     
     def run_game(self):
         """Cria um laço de repetição para a tela sempre ficar visível até

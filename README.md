@@ -50,7 +50,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ✔️ Disparo de projéteis  
 ✔️ Sistema de colisões entre projéteis e aliens  
 ✔️ Frota de aliens com movimentação lateral e descida automática  
-✔️ Alien especial com velocidade aumentada (`FastAlien`)  
 ✔️ Renderização modular do jogo  
 ✔️ Tratamento desacoplado de eventos  
 ✔️ Tela de vitória animada com efeito visual  
@@ -99,33 +98,7 @@ Game2D_Alien
 3. O `EntityManager` coordena entidades como aliens e projéteis  
 4. O `CollisionManager` realiza a detecção de colisões  
 5. O `Renderer` desenha os elementos da interface e do jogo  
-6. Quando todos os aliens são eliminados, a tela de vitória é exibida  
-
----
-
-## 📐 Arquitetura e Boas Práticas
-
-O projeto foi estruturado utilizando separação de responsabilidades e organização modular.
-
-### 🔹 Organização em Camadas
-- Entrada de eventos  
-- Modelos das entidades  
-- Gerenciamento das entidades  
-- Sistema de renderização  
-
-### 🔹 Aplicação dos Princípios SOLID
-- Classes com responsabilidade única  
-- Facilidade de extensão sem modificar código existente  
-- Componentes desacoplados  
-- Injeção de dependências através de objetos de configuração  
-
-### 🔹 Estrutura Modular
-A organização do projeto facilita:
-
-- Manutenção  
-- Testabilidade  
-- Escalabilidade  
-- Reutilização de código  
+6. Quando todos os aliens são eliminados, a tela de vitória é exibida   
 
 ---
 

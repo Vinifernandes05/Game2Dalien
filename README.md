@@ -1,4 +1,4 @@
-# 💥👾 Game2D_Alien — Alien Invasion
+# 💥👾 Game2DAlien
 
 ## 📌 Sobre o Projeto
 

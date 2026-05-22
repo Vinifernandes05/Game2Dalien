@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto consiste no desenvolvimento de uma versão didática do jogo **Alien Invasion**, criada durante a disciplina de Alta Qualidade de Software.
+Este projeto consiste no desenvolvimento de uma versão didática do jogo **Alien Invasion**, criada durante a disciplina de Alta Qualidade de Software, priorizando clareza, modularidade, arquitetura de software e facilidade de manutenção.
 
 O jogo foi desenvolvido em Python utilizando a biblioteca Pygame, com foco em arquitetura de software, organização em camadas, aplicação de princípios SOLID e boas práticas de desenvolvimento.
 
@@ -138,5 +138,3 @@ python src/alien_invasion.py
 - 💻 GitHub: https://github.com/Vinifernandes05  
 
 ---
-
-Este projeto foi desenvolvido como exercício da disciplina de Alta Qualidade de Software, priorizando clareza, modularidade, arquitetura de software e facilidade de manutenção.
